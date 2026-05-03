@@ -46,4 +46,7 @@ do
 done
 
 echo "======================="
-echo "FINAL SCORE: $total_score/$total_tests" > score.txt
+echo "FINAL SCORE: $total_score/$total_tests"
+
+# save score for GitHub Actions
+echo "$total_score/$total_tests" > score.txt
