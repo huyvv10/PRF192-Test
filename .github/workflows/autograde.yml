@@ -15,5 +15,17 @@ jobs:
       - name: Install GCC
         run: sudo apt-get update && sudo apt-get install -y gcc
 
+      - name: Make script executable
+        run: chmod +x scripts/grade_all.sh
+
       - name: Run grading
         run: bash scripts/grade_all.sh
+
+      - name: Save score
+        run: echo "Score saved"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: score
+          path: score.txt
