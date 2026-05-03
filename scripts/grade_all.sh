@@ -46,4 +46,4 @@ do
 done
 
 echo "======================="
-echo "FINAL SCORE: $total_score/$total_tests"
+echo "FINAL SCORE: $total_score/$total_tests" > score.txt
